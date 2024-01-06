@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ccc;
+}
+
+
+.container{
+   max-width: 900px;
+    margin: 0 auto;
+}
+
+.apply_box{
+max-width: 600px;
+padding: 20px ;
+background-color: white;
+margin: 0 auto;
+margin-top: 50px;
+box-shadow: 1px 2px 4px  rgba(1, 1, 1, 0.1);
+border-radius: 10px;
+}
+
+.title_small{
+    font-size: 20px;
+    
+}
+.form_container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,  minmax(200px,1fr));
+    gap: 20px;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 15px;
+}
+
+input,select,textarea{
+   padding:5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 15px;
+}
+input, select,focus{
+outline-color:red; 
+}
+.button_container {
+    display: flex;
+    justify-content: flex-end; /* it will bring apply to apper at end*/
+    margin-top: 20px;
+
+}
+button{
+    background-color: red;
+  border: transparent solid 2px;
+   padding: 5px 10px;
+   color:white;
+   border-radius: 8px;
+   transition: 0.3s ease-in;/* when we take the cursor on apply button it will take 0.3s to chane in black or white*/
+
+}
+button:hover{  /* hover is used when we move the cursor on apply button it will show the changes like color bc given below*/
+    background-color: #ccc;
+   border: 2px solid red;
+   color : black;
+   transition: 0.3s ease-out;
+   cursor: pointer; 
+} 
+.textarea_control {
+    grid-column: 1 / span 2;
+}
+.textarea_control,textarea{
+    width: 100%; /*it is used to cover address area fully*/
+}
+
+@media ( max-width:460px){ /* it is used for to come in columnwise   correctlyand when we used to fill the form in phone  it should appear correctly in column*/
+    .textarea_control{
+        grid-column: 1/ span 1;/*Span1  means it should take only 1 column and 1 row*/ 
+    }
+};
